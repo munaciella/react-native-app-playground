@@ -29,6 +29,7 @@ const styles = StyleSheet.create({
       BottomView: {
         width: "100%",
         height: '60%',
+        backgroundColor: "red"
       },
       textStyle: {
         color: "blue"
