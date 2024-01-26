@@ -66,7 +66,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
   },
   FormView: {
-    width: '90%',
+    width: '100%',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
