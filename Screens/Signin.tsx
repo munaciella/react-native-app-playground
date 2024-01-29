@@ -1,5 +1,12 @@
 import React from 'react';
-import {Button, StyleSheet, Text, View, Image, TextInput} from 'react-native';
+import {
+  TouchableOpacity,
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  TextInput,
+} from 'react-native';
 import SignUp from './SignUp';
 
 const SignIn = ({navigation}) => {
@@ -17,8 +24,20 @@ const SignIn = ({navigation}) => {
       <View style={styles.BottomView}>
         <Text style={styles.Heading}>Welcome{'\n'} Back </Text>
         <View style={styles.FormView}>
-          <TextInput placeholder={"Email"} placeholderTextColor={"white"} style={styles.TextInput}/>
-          <TextInput placeholder={"Password"} placeholderTextColor={"white"} style={styles.TextInput}/>
+          <TextInput
+            placeholder={'Email'}
+            placeholderTextColor={'white'}
+            style={styles.TextInput}
+          />
+          <TextInput
+            placeholder={'Password'}
+            secureTextEntry={true}
+            placeholderTextColor={'white'}
+            style={styles.TextInput}
+          />
+          <TouchableOpacity style={styles.Button}>
+            <Text style={styles.ButtonText}>Sign In</Text>
+          </TouchableOpacity>
         </View>
       </View>
     </View>
@@ -61,7 +80,7 @@ const styles = StyleSheet.create({
   },
   TextInput: {
     width: '90%',
-    borderWidth: 1, 
+    borderWidth: 1,
     borderColor: 'white',
     height: 50,
     borderRadius: 10,
@@ -76,6 +95,21 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     marginTop: 30,
+  },
+  Button: {
+    width: '90%',
+    color: '#000',
+    height: 50,
+    backgroundColor: '#fff',
+    borderRadius: 10,
+    marginTop: 20,
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  ButtonText: {
+    fontSize: 18,
+    fontWeight: 'bold',
   },
 });
 
