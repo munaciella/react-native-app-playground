@@ -18,6 +18,7 @@ const SignIn = ({navigation}) => {
         <Text style={styles.Heading}>Welcome{'\n'} Back </Text>
         <View style={styles.FormView}>
           <TextInput placeholder={"Email"} placeholderTextColor={"white"} style={styles.TextInput}/>
+          <TextInput placeholder={"Password"} placeholderTextColor={"white"} style={styles.TextInput}/>
         </View>
       </View>
     </View>
@@ -64,6 +65,9 @@ const styles = StyleSheet.create({
     borderColor: 'white',
     height: 50,
     borderRadius: 10,
+    paddingLeft: 10,
+    marginTop: 10,
+    color: 'white',
   },
   FormView: {
     width: '100%',
@@ -71,7 +75,7 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
-    marginTop: 40,
+    marginTop: 30,
   },
 });
 
