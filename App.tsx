@@ -24,7 +24,7 @@ function App(): React.JSX.Element {
           <NavigationContainer>
             <Stack.Navigator>
               <Stack.Screen name="signIn" component={SignIn} options={{headerShown: false}} />
-              <Stack.Screen name="signUp" component={SignUp} />
+              <Stack.Screen name="signUp" component={SignUp} options={{headerShown: false}} />
             </Stack.Navigator>
           </NavigationContainer>
   // <SafeAreaView style={styles.container}>
