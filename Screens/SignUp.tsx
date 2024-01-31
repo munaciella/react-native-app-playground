@@ -66,7 +66,7 @@ const styles = StyleSheet.create({
   ImageStyle: {
     width: 150,
     height: 150,
-    marginBottom: 15,
+    marginBottom: 10,
   },
   Heading: {
     color: '#fff',
