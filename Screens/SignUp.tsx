@@ -10,29 +10,19 @@ import {
 } from 'react-native';
 
 const SignUp = () => {
-  return (
-    <View style={styles.mainView}>
+    return (
+      <View style={styles.mainView}>
       <View style={styles.TopView}>
         <Image
           style={styles.ImageStyle}
           source={require('./../assets/icon.png')}
         />
       </View>
-      <ScrollView style={styles.BottomView}>
-        <Text style={styles.Heading}>Create{'\n'}account </Text>
+      <View style={styles.BottomView}>
+        <Text style={styles.Heading}>Welcome{'\n'} Back </Text>
         <View style={styles.FormView}>
           <TextInput
-            placeholder={'Full name'}
-            placeholderTextColor={'white'}
-            style={styles.TextInput}
-          />
-          <TextInput
             placeholder={'Email'}
-            placeholderTextColor={'white'}
-            style={styles.TextInput}
-          />
-          <TextInput
-            placeholder={'Mobile'}
             placeholderTextColor={'white'}
             style={styles.TextInput}
           />
@@ -42,20 +32,14 @@ const SignUp = () => {
             placeholderTextColor={'white'}
             style={styles.TextInput}
           />
-           <TextInput
-            placeholder={'Confirm Password'}
-            secureTextEntry={true}
-            placeholderTextColor={'white'}
-            style={styles.TextInput}
-          />
           <TouchableOpacity style={styles.Button}>
-            <Text style={styles.ButtonText}>Sign up</Text>
+            <Text style={styles.ButtonText}>Sign In</Text>
           </TouchableOpacity>
         </View>
-      </ScrollView>
+      </View>
     </View>
-  );
-};
+    )
+}
 
 const styles = StyleSheet.create({
   mainView: {
@@ -67,18 +51,18 @@ const styles = StyleSheet.create({
   },
   TopView: {
     width: '100%',
-    height: '22%',
+    height: '15%',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
   },
   BottomView: {
     width: '100%',
-    height: '78%',
+    height: '85%',
     backgroundColor: 'black',
     borderTopLeftRadius: 30,
     borderTopRightRadius: 30,
-    marginTop: 20,
+    marginTop: 20
   },
   ImageStyle: {
     width: 150,

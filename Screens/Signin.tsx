@@ -39,9 +39,6 @@ const SignIn = ({navigation}) => {
             <Text style={styles.ButtonText}>Sign In</Text>
           </TouchableOpacity>
         </View>
-        <TouchableOpacity style={styles.TextButton} onPress={navigate}>
-        <Text style={styles.SignUpText}>Sign up</Text>
-        </TouchableOpacity>
       </View>
     </View>
   );
@@ -113,15 +110,6 @@ const styles = StyleSheet.create({
   ButtonText: {
     fontSize: 18,
     fontWeight: 'bold',
-  },
-  SignUpText: {
-    color: 'gray',
-  },
-  TextButton: {
-    width: '100%',
-    display: 'flex',
-    alignItems: 'center',
-    marginTop: 20,
   },
 });
 
