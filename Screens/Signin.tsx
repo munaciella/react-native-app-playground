@@ -90,6 +90,7 @@ const styles = StyleSheet.create({
     paddingLeft: 10,
     marginTop: 10,
     color: 'white',
+    fontSize: 18
   },
   FormView: {
     width: '100%',
@@ -115,7 +116,9 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   SignUpText: {
-    color: 'gray'
+    color: 'gray',
+    fontSize: 18,
+    fontWeight: 'bold',
   }, 
   TextButton: {
     width: '100%',

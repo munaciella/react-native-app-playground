@@ -1,4 +1,5 @@
-import React from 'react';
+import React, {useState} from 'react';
+import {firebase} from '../Firebase/firebase';
 import {
   TouchableOpacity,
   StyleSheet,
@@ -10,8 +11,13 @@ import {
 } from 'react-native';
 
 const SignUp = ({navigation}) => {
-    return (
-      <View style={styles.mainView}>
+  console.log(firebase);
+  const navigate = () => {
+    navigation.navigate('signIn')
+  }
+
+  return (
+    <View style={styles.mainView}>
       <View style={styles.TopView}>
         <Image
           style={styles.ImageStyle}
@@ -19,16 +25,12 @@ const SignUp = ({navigation}) => {
         />
       </View>
       <ScrollView style={styles.BottomView}>
-        {/* <Image
-        style={styles.BackButton}
-        source={require('./../assets/chevron-left.svg')}
-        /> */}
-        <TouchableOpacity onPress={() => navigation.goBack()} style={styles.BackButton}>
+        <TouchableOpacity onPress={navigate} style={styles.BackButton}>
           <Text style={styles.BackButtonText}>{'<'}</Text>
         </TouchableOpacity>
         <Text style={styles.Heading}>Create{'\n'}account </Text>
         <View style={styles.FormView}>
-        <TextInput
+          <TextInput
             placeholder={'Full Name'}
             placeholderTextColor={'white'}
             style={styles.TextInput}
@@ -61,8 +63,8 @@ const SignUp = ({navigation}) => {
         </View>
       </ScrollView>
     </View>
-    )
-}
+  );
+};
 
 const styles = StyleSheet.create({
   mainView: {
@@ -85,13 +87,13 @@ const styles = StyleSheet.create({
     backgroundColor: 'black',
     borderTopLeftRadius: 30,
     borderTopRightRadius: 30,
-    marginTop: 20
+    marginTop: 20,
   },
   ImageStyle: {
     width: 150,
     height: 150,
     marginBottom: 15,
-    marginTop: 20
+    marginTop: 20,
   },
   Heading: {
     color: '#fff',
@@ -109,6 +111,7 @@ const styles = StyleSheet.create({
     paddingLeft: 10,
     marginTop: 10,
     color: 'white',
+    fontSize: 18,
   },
   FormView: {
     width: '100%',
@@ -144,7 +147,7 @@ const styles = StyleSheet.create({
   },
   BackButton: {
     fontSize: 24,
-    marginTop: 20, 
+    marginTop: 20,
     marginLeft: 20,
   },
   BackButtonText: {
