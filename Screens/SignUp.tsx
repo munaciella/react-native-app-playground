@@ -9,7 +9,7 @@ import {
   ScrollView,
 } from 'react-native';
 
-const SignUp = () => {
+const SignUp = ({navigation}) => {
     return (
       <View style={styles.mainView}>
       <View style={styles.TopView}>
@@ -18,9 +18,26 @@ const SignUp = () => {
           source={require('./../assets/icon.png')}
         />
       </View>
-      <View style={styles.BottomView}>
-        <Text style={styles.Heading}>Welcome{'\n'} Back </Text>
+      <ScrollView style={styles.BottomView}>
+        {/* <Image
+        style={styles.BackButton}
+        source={require('./../assets/chevron-left.svg')}
+        /> */}
+        <TouchableOpacity onPress={() => navigation.goBack()} style={styles.BackButton}>
+          <Text style={styles.BackButtonText}>{'<'}</Text>
+        </TouchableOpacity>
+        <Text style={styles.Heading}>Create{'\n'}account </Text>
         <View style={styles.FormView}>
+        <TextInput
+            placeholder={'Full Name'}
+            placeholderTextColor={'white'}
+            style={styles.TextInput}
+          />
+          <TextInput
+            placeholder={'Mobile'}
+            placeholderTextColor={'white'}
+            style={styles.TextInput}
+          />
           <TextInput
             placeholder={'Email'}
             placeholderTextColor={'white'}
@@ -32,11 +49,17 @@ const SignUp = () => {
             placeholderTextColor={'white'}
             style={styles.TextInput}
           />
+          <TextInput
+            placeholder={'Confirm Password'}
+            secureTextEntry={true}
+            placeholderTextColor={'white'}
+            style={styles.TextInput}
+          />
           <TouchableOpacity style={styles.Button}>
-            <Text style={styles.ButtonText}>Sign In</Text>
+            <Text style={styles.ButtonText}>Sign Up</Text>
           </TouchableOpacity>
         </View>
-      </View>
+      </ScrollView>
     </View>
     )
 }
@@ -51,14 +74,14 @@ const styles = StyleSheet.create({
   },
   TopView: {
     width: '100%',
-    height: '15%',
+    height: '22%',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
   },
   BottomView: {
     width: '100%',
-    height: '85%',
+    height: '78%',
     backgroundColor: 'black',
     borderTopLeftRadius: 30,
     borderTopRightRadius: 30,
@@ -68,13 +91,14 @@ const styles = StyleSheet.create({
     width: 150,
     height: 150,
     marginBottom: 15,
+    marginTop: 20
   },
   Heading: {
     color: '#fff',
     fontSize: 42,
     fontWeight: 'bold',
-    marginLeft: 40,
-    marginTop: 60,
+    marginLeft: 20,
+    marginTop: 20,
   },
   TextInput: {
     width: '90%',
@@ -109,14 +133,23 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: 'bold',
   },
-  SignUpText: {
-    color: 'gray',
-  },
+  // SignUpText: {
+  //   color: 'gray',
+  // },
   TextButton: {
     width: '100%',
     display: 'flex',
     alignItems: 'center',
     marginTop: 20,
+  },
+  BackButton: {
+    fontSize: 24,
+    marginTop: 20, 
+    marginLeft: 20,
+  },
+  BackButtonText: {
+    fontSize: 40,
+    color: 'white',
   },
 });
 
